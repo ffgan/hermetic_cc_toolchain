@@ -50,6 +50,7 @@ def target_structs():
             ret.append(_target_linux_gnu(gocpu, zigcpu, glibc))
     ret.append(_target_wasm())
     ret.append(_target_wasm_no_wasi())
+    ret.append(_target_linux_musl("riscv64", "riscv64"))
     return ret
 
 def _target_macos(gocpu, zigcpu):
