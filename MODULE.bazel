@@ -1,6 +1,6 @@
 module(
     name = "hermetic_cc_toolchain",
-    version = "4.0.1",
+    version = "4.0.2",
 )
 
 bazel_dep(name = "bazel_features", version = "1.21.0")
@@ -58,7 +58,6 @@ register_toolchains(
 
     # riscv64 toolchains
     "@zig_sdk//libc_aware/toolchain:linux_riscv64_musl",
-
 
     # zig toolchains
     "@zig_sdk//toolchain:zig",
