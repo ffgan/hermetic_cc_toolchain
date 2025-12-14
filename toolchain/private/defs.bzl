@@ -185,7 +185,8 @@ def _target_linux_musl(gocpu, zigcpu):
                    ] +
                    # x86_64-linux-any is x86_64-linux and x86-linux combined.
                    (["libc/include/x86-linux-any"] if zigcpu == "x86_64" else []) +
-                   (["libc/include/{}-linux-any".format(zigcpu)] if zigcpu != "x86_64" else []) + [
+                   (["libc/include/aarch64-linux-any".format(zigcpu)] if zigcpu == "aarch64" else []) + 
+                   (["libc/include/riscv-linux-any"] if zigcpu == "riscv64" else []) + [
             "libc/include/any-linux-any",
         ] + _INCLUDE_TAIL,
         linkopts = [],
