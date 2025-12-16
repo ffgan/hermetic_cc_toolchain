@@ -38,10 +38,6 @@ go_binary(
             "//libc_aware/platform:linux_amd64_musl",
         ),
         (
-            "linux_riscv64_musl_zig",
-            "//libc_aware/platform:linux_riscv64_musl_zig",
-        ),
-        (
             "linux_amd64_gnu.2.28",
             "//libc_aware/platform:linux_amd64_gnu.2.28",
         ),

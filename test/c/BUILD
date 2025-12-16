@@ -12,10 +12,6 @@ _LINUX_AMD64 = [
     "@platforms//cpu:x86_64",
 ]
 
-_LINUX_RISCV64 = [
-    "@platforms//os:linux",
-    "@platforms//cpu:riscv64",
-]
 
 _DARWIN_AMD64 = [
     "@platforms//os:macos",
@@ -57,14 +53,6 @@ _WINDOWS_AMD64 = [
             "linux_amd64_musl",
             "//libc_aware/platform:linux_amd64_musl",
             _LINUX_AMD64,
-            "^linux non-glibc",
-            [],
-            "NATIVE",
-        ),
-        (
-            "linux_riscv64_musl",
-            "//libc_aware/platform:linux_riscv64_musl_zig",
-            _LINUX_RISCV64,
             "^linux non-glibc",
             [],
             "NATIVE",
