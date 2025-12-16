@@ -39,7 +39,7 @@ def declare_libc_aware_platforms():
         "linux",
         "linux",
         suffix = "_gnu.2.38",
-        extra_constraints = ["//libc:gnu.2.38"],
+        extra_constraints = ["//libc:{}".format("gnu.2.38")],
     )
 
     declare_platform(
