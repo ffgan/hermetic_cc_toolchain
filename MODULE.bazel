@@ -57,6 +57,7 @@ register_toolchains(
     "@zig_sdk//toolchain:none_wasm",
 
     # riscv64 toolchains
+    "@zig_sdk//libc_aware/toolchain:linux_riscv64_gnu.2.38",
     "@zig_sdk//libc_aware/toolchain:linux_riscv64_musl",
     "@zig_sdk//toolchain:linux_riscv64_musl",
 
