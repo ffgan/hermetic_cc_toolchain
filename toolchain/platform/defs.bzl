@@ -18,8 +18,6 @@ def declare_platforms():
     declare_platform("wasm", "wasm32", "wasi", "wasip1")
     declare_platform("wasm", "wasm32", "none", "none")
 
-    declare_platform("riscv64", "riscv64", "linux", "linux")
-
 def declare_libc_aware_platforms():
     # create @zig_sdk//{os}_{arch}_platform entries with zig and go conventions
     # with libc specified
@@ -33,14 +31,6 @@ def declare_libc_aware_platforms():
                 suffix = "_{}".format(libc),
                 extra_constraints = ["//libc:{}".format(libc)],
             )
-    declare_platform(
-        "riscv64",
-        "riscv64",
-        "linux",
-        "linux",
-        suffix = "_gnu.2.38",
-        extra_constraints = ["//libc:{}".format("gnu.2.38")],
-    )
 
     declare_platform(
         "riscv64",
